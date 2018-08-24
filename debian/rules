@@ -102,22 +102,7 @@ DEFAULT_VIDEOSRC = videotestsrc
 DEFAULT_VISUALIZER = goom
 endif
 
-# Let's decide the package name and url depending on the distribution
-DISTRO = "$(shell dpkg-vendor --query vendor)"
-
-GST_PACKAGE_NAME := "GStreamer Good Plugins (unknown Debian derivative)"
-GST_PACKAGE_ORIGIN="http://packages.qa.debian.org/gst-plugins-good$(gst_abi)"
-
-ifeq ($(DISTRO),"Debian")
-GST_PACKAGE_NAME := "GStreamer Good Plugins (Debian)"
-GST_PACKAGE_ORIGIN="http://packages.qa.debian.org/gst-plugins-good$(gst_abi)"
-endif
-
-ifeq ($(DISTRO),"Ubuntu")
-GST_PACKAGE_NAME := "GStreamer Good Plugins (Ubuntu)"
-GST_PACKAGE_ORIGIN="https://launchpad.net/distros/ubuntu/+source/gst-plugins-good$(gst_abi)"
-endif
-
+GST_PACKAGE_NAME := "GStreamer Good Plugins"
 
 # setup links for packages
 pre-build::
@@ -139,27 +124,12 @@ pre-build::
 
 maint: debian/control
 
-debian/build-deps: debian/build-deps.in debian/rules
-	cat $< > $@
-
-debian/control:: debian/control.in debian/build-deps debian/mk.control debian/rules
-	perl debian/mk.control | sed \
-		-e 's/@GST_VERSION@/$(gst_version)/g' \
-		-e 's/@GST_ABI@/$(gst_abi)/g' \
-		-e 's/@GST_PKGNAME@/$(gst_pkgname)/g' \
-		-e 's/@GST_LIB@/$(gst_lib)/g' \
-		-e 's/@GST_LIB_DEV@/$(gst_lib_dev)/g' \
-		-e 's/@GST_LIB_DEV_DEP@/$(gst_lib_dev_dep)/g' \
-		-e 's/@GST_EXTRA_BUILD_DEPENDS@/$(gst_extra_build_depends)/g' \
-		>$@
-
 DEB_CONFIGURE_EXTRA_FLAGS += \
 	--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
 	--disable-examples \
 	--enable-DEBUG \
 	--enable-debug \
 	--with-package-name=$(GST_PACKAGE_NAME) \
-	--with-package-origin=$(GST_PACKAGE_ORIGIN) \
 	--disable-gtk-doc \
 	--enable-experimental \
 	--with-default-audiosink=$(DEFAULT_AUDIOSINK) \

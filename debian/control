@@ -1,4 +1,4 @@
-Source: gst-plugins-good1.0
+Source: imx-gst-plugins-good
 Section: libs
 Priority: optional
 Maintainer: AIY Projects <support-aiyprojects@google.com>

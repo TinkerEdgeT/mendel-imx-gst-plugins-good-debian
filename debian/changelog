@@ -1,3 +1,9 @@
+imx-gst-plugins-good (1.12.2+imx-1) unstable; urgency=medium
+
+  * Improved v4l2src performance.
+
+ -- AIY Projects <support-aiyprojects@google.com>  Mon, 29 Oct 2018 17:25:13 -0800
+
 imx-gst-plugins-good (1.12.2+imx-0) unstable; urgency=medium
 
   * Initial release

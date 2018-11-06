@@ -1,3 +1,9 @@
+imx-gst-plugins-good (1.12.2+imx-2) unstable; urgency=medium
+
+  * Improved v4l2src performance (avoid copying frames when using a tee).
+
+ -- AIY Projects <support-aiyprojects@google.com>  Tue, 06 Nov 2018 07:25:13 -0800
+
 imx-gst-plugins-good (1.12.2+imx-1) unstable; urgency=medium
 
   * Improved v4l2src performance.

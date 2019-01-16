@@ -1,3 +1,9 @@
+imx-gst-plugins-good (1.12.2+imx-3) mendel-beaker; urgency=medium
+
+  * Cut for beaker branch
+
+ -- AIY Projects <support-aiyprojects@google.com>  Wed, 16 Jan 2019 12:00:00 -0800
+
 imx-gst-plugins-good (1.12.2+imx-2) unstable; urgency=medium
 
   * Improved v4l2src performance (avoid copying frames when using a tee).

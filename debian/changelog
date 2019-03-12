@@ -2,30 +2,30 @@ imx-gst-plugins-good (1.12.2+imx-4) mendel-beaker; urgency=medium
 
   * Disable all libv4l2 emulated formats with V4L2_DISABLE_CONVERSION.
 
- -- AIY Projects <coral-support@google.com>  Wed, 06 Feb 2019 16:56:06 -0800
+ -- Coral <coral-support@google.com>  Wed, 06 Feb 2019 16:56:06 -0800
 
 imx-gst-plugins-good (1.12.2+imx-3) mendel-beaker; urgency=medium
 
   * Cut for beaker branch
 
- -- AIY Projects <coral-support@google.com>  Wed, 16 Jan 2019 12:00:00 -0800
+ -- Coral <coral-support@google.com>  Wed, 16 Jan 2019 12:00:00 -0800
 
 imx-gst-plugins-good (1.12.2+imx-2) unstable; urgency=medium
 
   * Improved v4l2src performance (avoid copying frames when using a tee).
 
- -- AIY Projects <coral-support@google.com>  Tue, 06 Nov 2018 07:25:13 -0800
+ -- Coral <coral-support@google.com>  Tue, 06 Nov 2018 07:25:13 -0800
 
 imx-gst-plugins-good (1.12.2+imx-1) unstable; urgency=medium
 
   * Improved v4l2src performance.
 
- -- AIY Projects <coral-support@google.com>  Mon, 29 Oct 2018 17:25:13 -0800
+ -- Coral <coral-support@google.com>  Mon, 29 Oct 2018 17:25:13 -0800
 
 imx-gst-plugins-good (1.12.2+imx-0) unstable; urgency=medium
 
   * Initial release
 
- -- AIY Projects <coral-support@google.com>  Wed, 04 Jul 2018 10:45:53 -0800
+ -- Coral <coral-support@google.com>  Wed, 04 Jul 2018 10:45:53 -0800
 
 

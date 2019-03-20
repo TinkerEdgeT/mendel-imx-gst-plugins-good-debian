@@ -1,4 +1,4 @@
-imx-gst-plugins-good (1.12.2+imx-4) mendel-beaker; urgency=medium
+imx-gst-plugins-good (1.12.2+imx-4) mendel-chef; urgency=medium
 
   * Disable all libv4l2 emulated formats with V4L2_DISABLE_CONVERSION.
 

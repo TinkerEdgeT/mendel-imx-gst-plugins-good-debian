@@ -118,22 +118,7 @@ DEFAULT_VIDEOSRC = videotestsrc
 DEFAULT_VISUALIZER = goom
 endif
 
-# Let's decide the package name and url depending on the distribution
-DISTRO = "$(shell dpkg-vendor --query vendor)"
-
-GST_PACKAGE_NAME := "GStreamer Good Plugins (unknown Debian derivative)"
-GST_PACKAGE_ORIGIN="http://packages.qa.debian.org/gst-plugins-good$(gst_abi)"
-
-ifeq ($(DISTRO),"Debian")
-GST_PACKAGE_NAME := "GStreamer Good Plugins (Debian)"
-GST_PACKAGE_ORIGIN="http://packages.qa.debian.org/gst-plugins-good$(gst_abi)"
-endif
-
-ifeq ($(DISTRO),"Ubuntu")
-GST_PACKAGE_NAME := "GStreamer Good Plugins (Ubuntu)"
-GST_PACKAGE_ORIGIN="https://launchpad.net/distros/ubuntu/+source/gst-plugins-good$(gst_abi)"
-endif
-
+GST_PACKAGE_NAME := "GStreamer Good Plugins"
 
 # setup links for packages
 pre-build::
@@ -161,7 +146,7 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 	--enable-DEBUG \
 	--enable-debug \
 	--with-package-name=$(GST_PACKAGE_NAME) \
-	--enable-gtk-doc \
+	--disable-gtk-doc \
 	--enable-experimental \
 	--with-default-audiosink=$(DEFAULT_AUDIOSINK) \
 	--with-default-audiosrc=$(DEFAULT_AUDIOSRC) \

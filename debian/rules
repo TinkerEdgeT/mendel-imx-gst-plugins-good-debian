@@ -81,7 +81,6 @@ ifeq ($(DEB_HOST_ARCH_OS),linux)
 PLUGINS +=
 endif
 VERSIONIZE= \
-	plugins-good-doc.install \
 
 ifeq ($(DEB_HOST_ARCH_OS),linux)
 1394 = debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/gstreamer-$(gst_abi)/libgst1394.so
